@@ -1,5 +1,5 @@
 """
-Decide every sentence of one TMKP regulation family (keep as mapped, repair, or drop), then write:
+Decide every sentence of one TMKP edge family (families.py; keep as mapped, repair, or drop), then write:
 
 - repaired edges, in TMKP's edges.tsv column layout (no header), so the ingest's existing reader can parse them
 - a sidecar (JSON lines) recording which original edges and sentences each repaired edge came from
@@ -9,17 +9,19 @@ Decide every sentence of one TMKP regulation family (keep as mapped, repair, or 
 
 Sentence decision, in order:
 1. A mention span missing or past the end of the text: drop.
-2. Hard rules on either mention (rules.py): protein family or complex, chemical fragment, lipid class mapped to
-   one species, unlabeled mention mapped to an isotope-labeled compound: drop.
+2. Hard rules (rules.py): a protein mention naming a family or complex; a chemical mention that is a fragment, a
+   lipid class mapped to one species, or unlabeled but mapped to an isotope-labeled compound: drop.
 3. Each mention's concept: a CPT1 protein mention takes its per-sentence isoform choice (P >= 0.7) or drops; a pair
    the HGNC symbol rule flags is kept, repaired or dropped by Jev's choice at P >= 0.7; any other pair judged wrong
    (P(wrong) >= 0.9) is repaired at P >= 0.9 or dropped; every other pair keeps its concept.
-4. The relation-only answer must support the edge's direction (P >= 0.7), else drop.
+4. The relation answer must support the edge (P >= 0.7), else drop: for regulation, the edge's direction
+   (increases or decreases); for contributes_to, causes.
 
-A repaired sentence's edge: a gene product as regulator (UniProtKB, PR, NCBIGene) makes it gene -> gene regulation
+A repaired regulation edge: a gene product as regulator (UniProtKB, PR, NCBIGene) makes it gene -> gene regulation
 (predicate biolink:regulates, relation biolink:GeneRegulatoryRelationship); a chemical regulator keeps
 biolink:affects (biolink:ChemicalToGeneAssociation). Both keep qualified_predicate causes, aspect
-activity_or_abundance and the original direction.
+activity_or_abundance and the original direction. Its target must be a gene product. A repaired contributes_to edge
+keeps biolink:contributes_to and its relation, and its subject must not be a gene product.
 
     python build_repairs.py chem_gene <data dir>
 """
@@ -47,14 +49,14 @@ COLUMNS = ["subject", "predicate", "object", "qualified_predicate", "subject_asp
            "supporting_study_results", "supporting_publications", "_attributes"]
 
 
-def hard_rule(s: dict) -> str | None:
+def hard_rule(s: dict, family: str) -> str | None:
     """The first hard rule that fires on either mention, or None. (The HGNC symbol rule is a hint, not here.)"""
     for role in ("subject", "object"):
         curie, mention = s[role], s[f"{role}_mention"]
         if curie.startswith("UniProtKB:"):
             if norm(mention) in FAMILY_NAMES:
                 return "family"
-        else:
+        elif role in FAMILIES[family]["chemical_roles"]:
             name = s[f"{role}_name"] or ""
             if LIPID_SPECIES.search(name) and not LIPID_SPECIES.search(mention or ""):
                 return "lipid_species"
@@ -106,25 +108,37 @@ def concept(s: dict, role: str, answers: dict) -> tuple[str | None, str]:
     return curie, "as_mapped"
 
 
-def decide(s: dict, relation: dict, answers: dict) -> tuple[str, str, str | None, str | None]:
+def supported(s: dict, relation: dict, family: str) -> bool:
+    """Whether the sentence's relation answer supports its edge (P >= RELATION_THRESHOLD)."""
+    if FAMILIES[family]["question"] == "contributes_to":
+        want = "causes"
+    else:
+        want = "increases" if s["object_direction"] == "increased" else "decreases"
+    return relation[want] >= RELATION_THRESHOLD
+
+
+def decide(s: dict, relation: dict, answers: dict, family: str) -> tuple[str, str, str | None, str | None]:
     """
     One sentence's (status, reason, final subject, final object): status is keep (supports its edge as mapped),
     repair (supports an edge between corrected concepts) or drop. relation is the sentence's relation answer.
     """
     if any(s[f"{r}_span"] is None or s[f"{r}_span"][1] > len(s["text"]) for r in ("subject", "object")):
         return "drop", "bad_span", None, None
-    if rule := hard_rule(s):
+    if rule := hard_rule(s, family):
         return "drop", f"rule:{rule}", None, None
     (subj, how_s), (obj, how_o) = concept(s, "subject", answers), concept(s, "object", answers)
-    want = "increases" if s["object_direction"] == "increased" else "decreases"
     if subj is None or obj is None:
         return "drop", how_s if subj is None else how_o, None, None
-    if relation[want] < RELATION_THRESHOLD:
+    if not supported(s, relation, family):
         return "drop", "relation", subj, obj
     if subj == s["subject"] and obj == s["object"]:
         return "keep", f"{how_s}/{how_o}", subj, obj
-    if not obj.startswith(GENE_PREFIXES):
-        # a repaired edge's target must be a gene product (the other side was mapped to e.g. a drug)
+    if FAMILIES[family]["question"] == "contributes_to":
+        if subj.startswith(GENE_PREFIXES):
+            # an endogenous protein mapped to a drug is dropped, not repaired (Chris, 2026-11-17)
+            return "drop", "repaired_subject_gene_product", subj, obj
+    elif not obj.startswith(GENE_PREFIXES):
+        # a repaired regulation edge's target must be a gene product (the other side was mapped to e.g. a drug)
         return "drop", "repaired_object_not_gene_product", subj, obj
     return "repair", f"{how_s}/{how_o}", subj, obj
 
@@ -140,7 +154,7 @@ def main(family: str, data: str) -> None:
         for s in map(json.loads, f):
             key = (s["edge_id"], s["sentence_id"])
             direction = s["object_direction"]
-            status, reason, subj, obj = decide(s, answers["relation"][key], answers)
+            status, reason, subj, obj = decide(s, answers["relation"][key], answers, family)
             outcomes[status] += 1
             reasons[(status, reason)] += 1
             if status == "keep":
@@ -172,10 +186,15 @@ def main(family: str, data: str) -> None:
             nested = [{n["attribute_type_id"]: n["value"] for n in r["attributes"]} for r in results]
             pubs = sorted({x["biolink:publications"] for x in nested if x.get("biolink:publications")})
             confidence = max(float(x.get("biolink:extraction_confidence_score") or 0) for x in nested)
-            gene_regulator = subj.startswith(GENE_PREFIXES)
+            regulation = FAMILIES[family]["question"] == "regulation"
+            gene_regulator = regulation and subj.startswith(GENE_PREFIXES)
             n_regulates += gene_regulator
-            predicate = "biolink:regulates" if gene_regulator else "biolink:affects"
-            relation_type = "biolink:GeneRegulatoryRelationship" if gene_regulator else FAMILIES["chem_gene"]["relation"]
+            if gene_regulator:
+                predicate, relation_type = "biolink:regulates", FAMILIES["gene_gene"]["relation"]
+            elif regulation:
+                predicate, relation_type = "biolink:affects", FAMILIES["chem_gene"]["relation"]
+            else:
+                predicate, relation_type = FAMILIES[family]["predicate"], FAMILIES[family]["relation"]
             edge_id = "tmkp-repair:" + hashlib.sha256(f"{subj}|{predicate}|{obj}|{direction}".encode()).hexdigest()
             attributes = [
                 {"attribute_type_id": "biolink:knowledge_level", "value": "not_provided"},
@@ -186,9 +205,10 @@ def main(family: str, data: str) -> None:
                 {"attribute_type_id": "biolink:extraction_confidence_score", "value": confidence},
                 {"attribute_type_id": "biolink:publications", "value": pubs},
                 *results]
-            row = {c: "" for c in COLUMNS} | {
-                "subject": subj, "predicate": predicate, "object": obj, "qualified_predicate": "biolink:causes",
-                "object_aspect_qualifier": "activity_or_abundance", "object_direction_qualifier": direction,
+            qualifiers = {"qualified_predicate": "biolink:causes", "object_aspect_qualifier": "activity_or_abundance",
+                          "object_direction_qualifier": direction} if regulation else {}
+            row = {c: "" for c in COLUMNS} | qualifiers | {
+                "subject": subj, "predicate": predicate, "object": obj,
                 "id": edge_id, "relation": relation_type, "confidence_score": str(confidence),
                 "supporting_study_results": "|".join(r["value"] for r in results),
                 "supporting_publications": "|".join(pubs), "_attributes": json.dumps(attributes)}
@@ -213,8 +233,8 @@ def main(family: str, data: str) -> None:
         print(f"      {status:7} {reason:32} {n:9}")
     print(f"original edges: {len(all_edges)}; kept {len(kept_edges)}; dropped {len(dropped)} ({len(dropped) / len(all_edges):.1%})")
     print(f"sentences pruned from kept edges: {len(pruned)}")
-    print(f"repaired edges: {len(repaired)} ({n_regulates} gene -> gene regulates, {len(repaired) - n_regulates} chemical "
-          f"-> gene affects), from {len(needed)} sentences")
+    print(f"repaired edges: {len(repaired)} ({n_regulates} gene -> gene regulates, {len(repaired) - n_regulates} with a "
+          f"chemical subject), from {len(needed)} sentences")
 
 
 if __name__ == "__main__":

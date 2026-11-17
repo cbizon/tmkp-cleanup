@@ -1,0 +1,402 @@
+{
+ "0": {
+  "answer": "A",
+  "also_correct": "",
+  "note": ""
+ },
+ "1": {
+  "answer": "B",
+  "also_correct": "",
+  "note": "mostly contact/type IV allergic dermatitis; mention slightly broader"
+ },
+ "2": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "mixed (type 3) RTA; options are broader RTA or proximal/distal only"
+ },
+ "3": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "BPTI here = benign paroxysmal torticollis of infancy, not aprotinin"
+ },
+ "4": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "DHPP is a disease/infection abbreviation, not a chemical"
+ },
+ "5": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "mis-span of 'valvular heart disease, congenital heart disease'; no single matching option"
+ },
+ "6": {
+  "answer": "A",
+  "also_correct": "",
+  "note": "cannabidiol"
+ },
+ "7": {
+  "answer": "B",
+  "also_correct": "D",
+  "note": "NAD+; nadide same"
+ },
+ "8": {
+  "answer": "B",
+  "also_correct": "",
+  "note": "diglyceride = diacylglycerol"
+ },
+ "9": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "endogenous PDGF-BB growth factor, not becaplermin drug"
+ },
+ "10": {
+  "answer": "A",
+  "also_correct": "B",
+  "note": "PI class; 1-phosphatidyl-1D-myo-inositol equivalent"
+ },
+ "11": {
+  "answer": "C",
+  "also_correct": "A,B",
+  "note": "generic PE"
+ },
+ "12": {
+  "answer": "D",
+  "also_correct": "A,B",
+  "note": "generic PC"
+ },
+ "13": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "hypotension during anesthesia in infants; not pure autonomic failure, not orthostatic"
+ },
+ "14": {
+  "answer": "C",
+  "also_correct": "A",
+  "note": "mesna; coenzyme M is the free acid"
+ },
+ "15": {
+  "answer": "D",
+  "also_correct": "",
+  "note": "disodium hydrogen phosphate = dibasic sodium phosphate"
+ },
+ "16": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "mono-arthritis"
+ },
+ "17": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "part of 1-fluoro-2,4-dinitrobenzene (DNFB); no option"
+ },
+ "18": {
+  "answer": "C",
+  "also_correct": "A,B",
+  "note": "generic PC"
+ },
+ "19": {
+  "answer": "D",
+  "also_correct": "A",
+  "note": "ferric gluconate; hydrate form same drug"
+ },
+ "20": {
+  "answer": "B",
+  "also_correct": "A,C",
+  "note": "generic PE"
+ },
+ "21": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "anti-PL = antiphospholipid antibodies"
+ },
+ "22": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "the word 'In'"
+ },
+ "23": {
+  "answer": "D",
+  "also_correct": "A,B",
+  "note": "generic PC"
+ },
+ "24": {
+  "answer": "A",
+  "also_correct": "",
+  "note": "drug-induced organizing pneumonia, not cryptogenic"
+ },
+ "25": {
+  "answer": "B",
+  "also_correct": "",
+  "note": "nutritional deficiency disease"
+ },
+ "26": {
+  "answer": "D",
+  "also_correct": "",
+  "note": ""
+ },
+ "27": {
+  "answer": "A",
+  "also_correct": "",
+  "note": ""
+ },
+ "28": {
+  "answer": "C",
+  "also_correct": "",
+  "note": "congenital neutropenia usually = severe congenital neutropenia"
+ },
+ "29": {
+  "answer": "A",
+  "also_correct": "",
+  "note": "acute febrile neutrophilic dermatosis = Sweet syndrome"
+ },
+ "30": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "androgen receptor"
+ },
+ "31": {
+  "answer": "A",
+  "also_correct": "B,D",
+  "note": "generic PC"
+ },
+ "32": {
+  "answer": "C",
+  "also_correct": "",
+  "note": ""
+ },
+ "33": {
+  "answer": "A",
+  "also_correct": "C,D",
+  "note": "generic PC"
+ },
+ "34": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "'mmol/l glucose' = D-glucose concentration, not L-glucose"
+ },
+ "35": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "secondary (acquired) hypogammaglobulinemia; options are transient/CVID"
+ },
+ "36": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "D-serine; options are serine (broader) or derivatives"
+ },
+ "37": {
+  "answer": "A",
+  "also_correct": "",
+  "note": "spontaneous coronary artery dissection"
+ },
+ "38": {
+  "answer": "A",
+  "also_correct": "B,D",
+  "note": "generic PE"
+ },
+ "39": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "endogenous enzyme (salivary/digestive amylase)"
+ },
+ "40": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "rayon fibre industry"
+ },
+ "41": {
+  "answer": "C",
+  "also_correct": "B,D",
+  "note": "generic PC"
+ },
+ "42": {
+  "answer": "A",
+  "also_correct": "",
+  "note": ""
+ },
+ "43": {
+  "answer": "C",
+  "also_correct": "",
+  "note": ""
+ },
+ "44": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "C. = genus abbreviation (Cryptococcus/Citrobacter)"
+ },
+ "45": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "calcium; no calcium option"
+ },
+ "46": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "gestational hypertension; preeclampsia is distinct"
+ },
+ "47": {
+  "answer": "C",
+  "also_correct": "",
+  "note": "fundic gland polyposis; MONDO term is closest exact name"
+ },
+ "48": {
+  "answer": "A",
+  "also_correct": "C,D",
+  "note": "generic PC"
+ },
+ "49": {
+  "answer": "C",
+  "also_correct": "A,B",
+  "note": "generic PC"
+ },
+ "50": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "mostly NMDA receptor sense (anti-NMDAR, receptors); one use is NMDA chemical"
+ },
+ "51": {
+  "answer": "C",
+  "also_correct": "",
+  "note": ""
+ },
+ "52": {
+  "answer": "A",
+  "also_correct": "",
+  "note": "glucose-galactose malabsorption (SGLT1)"
+ },
+ "53": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "INS-1 cell line injury"
+ },
+ "54": {
+  "answer": "B",
+  "also_correct": "",
+  "note": ""
+ },
+ "55": {
+  "answer": "B",
+  "also_correct": "",
+  "note": "phenotype of increased urinary glutathione; GGT deficiency is the disease"
+ },
+ "56": {
+  "answer": "A",
+  "also_correct": "",
+  "note": ""
+ },
+ "57": {
+  "answer": "C",
+  "also_correct": "B,D",
+  "note": "generic PC"
+ },
+ "58": {
+  "answer": "B",
+  "also_correct": "",
+  "note": ""
+ },
+ "59": {
+  "answer": "C",
+  "also_correct": "A,D",
+  "note": "generic PC"
+ },
+ "60": {
+  "answer": "A",
+  "also_correct": "C,D",
+  "note": "generic PC"
+ },
+ "61": {
+  "answer": "A",
+  "also_correct": "B,D",
+  "note": "generic PC"
+ },
+ "62": {
+  "answer": "D",
+  "also_correct": "",
+  "note": "saccharated ferric oxide = iron sucrose"
+ },
+ "63": {
+  "answer": "C",
+  "also_correct": "",
+  "note": "macrophage activation syndrome in lupus"
+ },
+ "64": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "endogenous pancreatic lipase enzyme, not pancrelipase drug"
+ },
+ "65": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "refers to InsP3 receptor, not the messenger molecule"
+ },
+ "66": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "systemic lupus erythematosus"
+ },
+ "67": {
+  "answer": "C",
+  "also_correct": "",
+  "note": "SEPN1 = SELENON"
+ },
+ "68": {
+  "answer": "B",
+  "also_correct": "",
+  "note": "ectopic = automatic/focal atrial tachycardia"
+ },
+ "69": {
+  "answer": "A",
+  "also_correct": "",
+  "note": "early gastric cancer ~ microinvasive gastric cancer"
+ },
+ "70": {
+  "answer": "A",
+  "also_correct": "B,D",
+  "note": "generic PE"
+ },
+ "71": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "substructure of AM251 name, not pyrazole itself"
+ },
+ "72": {
+  "answer": "B",
+  "also_correct": "A,D",
+  "note": "generic PC"
+ },
+ "73": {
+  "answer": "B",
+  "also_correct": "",
+  "note": "glucoside class"
+ },
+ "74": {
+  "answer": "A",
+  "also_correct": "B,C",
+  "note": "generic PC"
+ },
+ "75": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "cadmium; no option"
+ },
+ "76": {
+  "answer": "B",
+  "also_correct": "",
+  "note": "carbon monoxide"
+ },
+ "77": {
+  "answer": "A",
+  "also_correct": "B,C",
+  "note": "generic PC"
+ },
+ "78": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "endogenous BNP hormone; role drug (nesiritide/BNP options not apt)"
+ },
+ "79": {
+  "answer": "NONE",
+  "also_correct": "",
+  "note": "chronic allograft nephropathy; no matching option"
+ }
+}

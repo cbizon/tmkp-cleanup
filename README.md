@@ -15,13 +15,13 @@ doesn't run this code or call any model.
 | Directory | Edges | Published files |
 |---|---|---|
 | [`treats/`](treats/README.md) | Chemical → disease `treats_or_applied_or_studied_to_treat` | `tmkp_treats_jev_v3_dropped_edges.txt.gz` |
-| [`regulation/`](regulation/README.md) | Chemical → protein and protein → protein `affects` (increased/decreased) | `tmkp_{chem_gene,gene_gene}_{dropped_edges.txt.gz,pruned_sentences.txt.gz,repaired_edges.tsv.gz}` |
+| [`pipeline/`](pipeline/README.md) | Chemical → protein and protein → protein `affects` (increased/decreased); chemical → disease or phenotype `contributes_to` | `tmkp_{chem_gene,gene_gene,chem_disease}_{dropped_edges.txt.gz,pruned_sentences.txt.gz,repaired_edges.tsv.gz}` |
 
 Each directory's README covers the method, policy decisions, results, validation, cost and how to reproduce the
 files. Labels in the `validation/` folders were made by Claude instances working blind to Jev's answers from written
 rubrics.
 
-Chemical → disease `contributes_to` edges aren't cleaned yet.
+Together these cover every TMKP edge type.
 
 ## Running
 
@@ -30,7 +30,7 @@ The scripts are plain Python (standard library) except the ones that call Jev, w
 directory. Doctests run per directory, since both have an `extract_sentences.py`:
 
 ```bash
-(cd treats && uv run pytest) && (cd regulation && uv run pytest)
+(cd treats && uv run pytest) && (cd pipeline && uv run pytest)
 ```
 
 **The API key.** The Jev scripts read the key from `TYPESAFE_API_KEY` and stop if it isn't set. Don't type the key

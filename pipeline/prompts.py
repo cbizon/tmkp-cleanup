@@ -1,5 +1,6 @@
 """
-The questions put to Jev for TMKP chemical -> protein sentences, exactly as they were run (jev-1.13.0).
+The questions put to Jev, exactly as they were run (jev-1.13.0). The regulation families (chem_gene, gene_gene) share
+the first set; chem_disease (contributes_to) has its own relation, mapping and repair wording, further down.
 
 Option order matters: Jev leans toward earlier options, so the conservative option comes first.
 """
@@ -87,6 +88,87 @@ CPT1_CRITERIA = {'none': {'what': "The isoform can't be told from the context, t
  'CPT1C': {'what': 'CPT1C, the brain isoform (neurons, hypothalamus).', 'examples': ['hypothalamic CPT1c']}}
 CPT1_UNIPROT = {'CPT1A': 'UniProtKB:P50416', 'CPT1B': 'UniProtKB:Q92523', 'CPT1C': 'UniProtKB:Q8TCG5'}
 
+
+# --- chem_disease: chemical contributes_to disease or phenotype ---
+
+# relation (asked per sentence). Policy (Chris, 2026-11-17): in vitro evidence doesn't support contributes_to; a
+# chemical used to induce an experimental disease in live animals does; the body's own protein mapped to a drug entry
+# is a wrong mapping. That last one depends on each sentence's context, so it is an option here as well as part of
+# the mapping question.
+CONTRIBUTES_INSTRUCTIONS = (
+    'In `text`, how is `drug` related to `condition`? `drug` and `condition` give the words used in `text` and, in '
+    'brackets, the concept they were mapped to. Judge only what `text` says about `drug` itself (not a deficiency, '
+    'loss or removal of it, and not a different compound or a diet it is part of).')
+CONTRIBUTES_CRITERIA = {
+    'other': {'what': '`text` does not say `drug` contributes to `condition`: `condition` is only background (the '
+                      'patients or animals have it), the two merely occurred together or are only listed together, '
+                      '`drug` is a reagent, anesthetic or tool in the study (tamoxifen or doxycycline used to switch '
+                      'a transgene on), `drug` levels are only a marker that changes with `condition`, a deficiency '
+                      'or loss of `drug` is what matters, a difference was not significant, or the text only '
+                      'describes a study design.',
+              'examples': ['fenofibrate increased creatinine in patients with chronic renal failure',
+                           'a patient developed COVID-19 while on belimumab',
+                           'serum uric acid was higher in patients with gout']},
+    'endogenous': {'what': "`drug` is the body's own protein (a protein hormone, cytokine, growth factor or enzyme "
+                           'such as ACTH, PTH, leptin, IL-2 or interferon gamma): its natural level, secretion, '
+                           'overproduction or a transgene, not given as a drug or exposure. Only proteins: small '
+                           'molecules the body makes (histamine, glucose, dopamine, cAMP, nitric oxide, cortisol, '
+                           'iron) are not this option; judge them like any chemical.',
+                   'examples': ['overproduction of ACTH leads to hypertension',
+                                'local release of IL-2 may contribute to microthrombi']},
+    'in_vitro': {'what': 'The only evidence is in cells, cell lines, cultured tissue or a test tube, such as '
+                         'killing or stimulating cancer cells in culture; not in people or live animals.',
+                 'examples': ['acrylamide was cytotoxic to HepG2 cells',
+                              'nicotine stimulated proliferation of A549 lung cancer cells']},
+    'caution': {'what': '`condition` is only a contraindication or a reason for caution or dose adjustment with '
+                        '`drug`, without saying `drug` causes it.',
+                'examples': ['use with caution in patients with kidney disease']},
+    'treats': {'what': '`drug` treats, prevents or improves `condition`, or is tested or proposed to.',
+               'examples': ['doxycycline therapy for leptospirosis']},
+    'no_effect': {'what': '`drug` was found not to cause or affect `condition`.',
+                  'examples': ['no increase in diabetes with vedolizumab']},
+    'causes': {'what': '`drug` causes, induces, worsens, promotes or raises the risk of `condition` in people or '
+                       'live animals, or `condition` is an adverse effect or toxicity of `drug`, including a '
+                       'chemical given to animals to induce an experimental disease.',
+               'examples': ['sorafenib may cause congestive heart failure', 'streptozotocin-induced diabetes in rats',
+                            'adverse reactions of cladribine include neutropenia']},
+}
+
+# mapping (once per distinct (mention, concept) pair; same instructions as PAIR_INSTRUCTIONS, its own criteria).
+# Policy (Chris, 2026-11-17): the body's own protein mapped to a drug entry is wrong, and isn't repaired to the protein.
+CONTRIBUTES_PAIR_CRITERIA = {
+    'wrong': {'what': 'In the examples `mention` means something other than `concept`. For a chemical: part of a '
+                      "longer chemical name, a salt's counter-ion, a drug class, a generic lipid class mapped to one "
+                      'species, a derivative or a different compound, or the body\'s own protein (a cytokine, '
+                      'hormone, enzyme or receptor) mapped to a drug entry when the text means the endogenous '
+                      'protein rather than a drug given. For a disease or phenotype: a different condition (an '
+                      'abbreviation resolved to the wrong disease, a word read in the wrong sense), a more specific '
+                      'disease than the words name, or something that isn\'t a condition at all (a cell type, '
+                      'process, measurement or organism).',
+              'examples': ["'IL-2' meaning the patient's own interleukin-2 -> Human interleukin-2 (a drug entry)",
+                           "'cardiac depression' -> depressive disorder",
+                           "'HES' meaning hypereosinophilic syndrome -> Hidradenitis suppurativa",
+                           "'chloride' in 'lithium chloride' -> Chloride ion"]},
+    'mixed': {'what': '`mention` means `concept` in some examples and something else in others.',
+              'examples': ["'MS' as multiple sclerosis in one sentence and mitral stenosis in another"]},
+    'right': {'what': '`mention` means `concept` in every example (a salt form or brand name may map to the drug, '
+                      'a protein given as a drug may map to its drug entry, and an abbreviation may map to the '
+                      'condition it stands for).',
+              'examples': ["'MMF' -> Mycophenolate mofetil", "'erythropoietin therapy' -> Erythropoietin",
+                           "'DILI' -> drug-induced liver injury"]},
+}
+
+# repair choice for chem_disease pairs judged wrong (candidate options are added per pair)
+CONTRIBUTES_REPAIR_INSTRUCTIONS = (
+    'In each example sentence the words `mention` (marked with « ») were mapped to `wrong_concept`, which is '
+    'incorrect. Which option is the concept `mention` actually refers to in these sentences? Wording, abbreviation, '
+    'spelling and plural forms may differ. A salt form or brand name counts as the drug. A broader or narrower '
+    'concept, a look-alike or a related concept is not it.')
+CONTRIBUTES_REPAIR_NONE = {
+    'what': "None of the other options is what `mention` means: it names the body's own protein, a drug class, a "
+            "cell type or process, or a concept that isn't listed; or the closest option is broader, narrower or "
+            'only related.',
+    'examples': ["'IL-6' meaning the patient's interleukin-6", "'NSAIDs' (a drug class)"]}
 
 def marked(example: dict) -> str:
     """

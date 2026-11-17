@@ -137,8 +137,5 @@ What it wrongly flags: a few real treatments where the drug is an adjunct (G-CSF
 
 ## Other TMKP edge types
 
-- **Chemical → protein** and **protein → protein** (`affects`, increased/decreased): filtered and repaired; see
-  `../regulation/README.md`.
-- **Chemical → disease or phenotype** (`contributes_to`; 122,391 edges, 234,717 sentences; 37% of pilot sentences
-  unsupported) isn't filtered yet. The regulation pipeline (per-pair mapping check, repair, relation question) should
-  carry over, for roughly $10 in Jev calls.
+Chemical → protein and protein → protein (`affects`, increased/decreased) and chemical → disease or phenotype
+(`contributes_to`) are filtered and repaired one sentence at a time; see `../pipeline/README.md`.
