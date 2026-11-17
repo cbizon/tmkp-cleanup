@@ -1,5 +1,5 @@
 """
-Deterministic checks for TMKP chemical -> protein sentences.
+Deterministic checks on TMKP sentence mentions (chemical rules apply to chemical mentions, the family rule to proteins).
 
 Hard rules (a sentence that fails one is dropped; build_repairs.py):
 - family: a mention that names a protein family or complex can't map to one member
