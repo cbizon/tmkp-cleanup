@@ -1,0 +1,1170 @@
+{
+ "0": {
+  "group": "acted",
+  "role": "object",
+  "key": "johnsonsyndrome",
+  "curie": "MONDO:0019419",
+  "count": 54,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0018229",
+  "letter_to_curie": {
+   "A": "MONDO:0018229",
+   "B": "MONDO:0044739",
+   "C": "MONDO:0009380",
+   "D": "MONDO:0019419"
+  }
+ },
+ "1": {
+  "group": "acted",
+  "role": "object",
+  "key": "allergicdermatitis",
+  "curie": "MONDO:0004980",
+  "count": 81,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0006525",
+  "letter_to_curie": {
+   "A": "MONDO:0002138",
+   "B": "MONDO:0006525",
+   "C": "MONDO:0004980"
+  }
+ },
+ "2": {
+  "group": "acted",
+  "role": "object",
+  "key": "mixedrenaltubularacidosis",
+  "curie": "MONDO:0009818",
+  "count": 4,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0001909",
+  "letter_to_curie": {
+   "A": "MONDO:0001909",
+   "B": "MONDO:0008369",
+   "C": "MONDO:0009818",
+   "D": "MONDO:0015827"
+  }
+ },
+ "3": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "bpti",
+  "curie": "DRUGBANK:DB06692",
+  "count": 4,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB06692",
+   "B": "PUBCHEM.COMPOUND:22833874"
+  }
+ },
+ "4": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "dhpp",
+  "curie": "DRUGBANK:DB05262",
+  "count": 2,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:10424810",
+   "B": "CHEBI:34677",
+   "C": "DRUGBANK:DB05262"
+  }
+ },
+ "5": {
+  "group": "acted",
+  "role": "object",
+  "key": "valvularheartdiseasecongenital",
+  "curie": "MONDO:0010753",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0005453",
+  "letter_to_curie": {
+   "A": "MONDO:0009867",
+   "B": "MONDO:0010753",
+   "C": "MONDO:0005453"
+  }
+ },
+ "6": {
+  "group": "acted",
+  "role": "subject",
+  "key": "cbd",
+  "curie": "DRUGBANK:DB14050",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:69478",
+  "letter_to_curie": {
+   "A": "CHEBI:69478",
+   "B": "PUBCHEM.COMPOUND:173616",
+   "C": "DRUGBANK:DB14050",
+   "D": "PUBCHEM.COMPOUND:21120736"
+  }
+ },
+ "7": {
+  "group": "acted",
+  "role": "subject",
+  "key": "nad",
+  "curie": "DRUGBANK:DB14128",
+  "count": 76,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:15846",
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:170119",
+   "B": "CHEBI:15846",
+   "C": "CHEBI:18304",
+   "D": "DRUGBANK:DB14128"
+  }
+ },
+ "8": {
+  "group": "acted",
+  "role": "subject",
+  "key": "diacylglycerol",
+  "curie": "CHEBI:134568",
+  "count": 25,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:18035",
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:4168728",
+   "B": "CHEBI:18035",
+   "C": "CHEBI:17962",
+   "D": "CHEBI:134568"
+  }
+ },
+ "9": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "pdgfbb",
+  "curie": "DRUGBANK:DB00102",
+  "count": 51,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:159596",
+   "B": "PUBCHEM.COMPOUND:9823454",
+   "C": "PUBCHEM.COMPOUND:12687",
+   "D": "DRUGBANK:DB00102"
+  }
+ },
+ "10": {
+  "group": "acted",
+  "role": "subject",
+  "key": "phosphatidylinositol",
+  "curie": "CHEBI:136246",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:28874",
+  "letter_to_curie": {
+   "A": "CHEBI:28874",
+   "B": "CHEBI:16749",
+   "C": "PUBCHEM.COMPOUND:194153",
+   "D": "CHEBI:136246"
+  }
+ },
+ "11": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylethanolamine",
+  "curie": "CHEBI:136195",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:114944",
+   "B": "CHEBI:47767",
+   "C": "CHEBI:16038",
+   "D": "CHEBI:136195"
+  }
+ },
+ "12": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:134580",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:25223701",
+   "B": "CHEBI:16110",
+   "C": "CHEBI:134580",
+   "D": "CHEBI:64482"
+  }
+ },
+ "13": {
+  "group": "dropped",
+  "role": "object",
+  "key": "idiopathicorthostatichypotension",
+  "curie": "MONDO:0018608",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "MONDO:0018608",
+   "B": "MONDO:0005469",
+   "C": "MONDO:0009123"
+  }
+ },
+ "14": {
+  "group": "acted",
+  "role": "subject",
+  "key": "mesna",
+  "curie": "DRUGBANK:DB09110",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:31824",
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB09110",
+   "B": "PUBCHEM.COMPOUND:44151027",
+   "C": "CHEBI:31824",
+   "D": "PUBCHEM.COMPOUND:25182591"
+  }
+ },
+ "15": {
+  "group": "acted",
+  "role": "subject",
+  "key": "disodiumhydrogenphosphateanhydrous",
+  "curie": "DRUGBANK:DB09449",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:34683",
+  "letter_to_curie": {
+   "A": "CHEBI:16240",
+   "B": "CHEBI:75832",
+   "C": "DRUGBANK:DB09449",
+   "D": "CHEBI:34683"
+  }
+ },
+ "16": {
+  "group": "dropped",
+  "role": "object",
+  "key": "mono",
+  "curie": "MONDO:0005810",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "MONDO:0005810",
+   "B": "MONDO:0975906",
+   "C": "MONDO:0010563"
+  }
+ },
+ "17": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "24dinitrobenzene",
+  "curie": "DRUGBANK:DB02680",
+  "count": 16,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:69042",
+   "B": "PUBCHEM.COMPOUND:275684",
+   "C": "DRUGBANK:DB02680"
+  }
+ },
+ "18": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136089",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:16110",
+   "B": "PUBCHEM.COMPOUND:25223701",
+   "C": "CHEBI:64482",
+   "D": "CHEBI:136089"
+  }
+ },
+ "19": {
+  "group": "acted",
+  "role": "subject",
+  "key": "ferricgluconate",
+  "curie": "DRUGBANK:DB14488",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:34762",
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:177637945",
+   "B": "DRUGBANK:DB14488",
+   "C": "CHEBI:3309",
+   "D": "CHEBI:34762"
+  }
+ },
+ "20": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylethanolamine",
+  "curie": "CHEBI:136156",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:47767",
+   "B": "CHEBI:16038",
+   "C": "PUBCHEM.COMPOUND:114944",
+   "D": "CHEBI:136156"
+  }
+ },
+ "21": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "pl",
+  "curie": "DRUGBANK:DB11133",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:5385029",
+   "B": "CHEBI:81588",
+   "C": "DRUGBANK:DB11133",
+   "D": "CHEBI:74791"
+  }
+ },
+ "22": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "in",
+  "curie": "DRUGBANK:DB00638",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB00638",
+   "B": "CHEBI:30430",
+   "C": "DRUGBANK:DB16709",
+   "D": "CHEBI:74063"
+  }
+ },
+ "23": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136079",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:16110",
+   "B": "PUBCHEM.COMPOUND:25223701",
+   "C": "CHEBI:136079",
+   "D": "CHEBI:64482"
+  }
+ },
+ "24": {
+  "group": "acted",
+  "role": "object",
+  "key": "organizedpneumonia",
+  "curie": "MONDO:0015265",
+  "count": 5,
+  "symbol_hint": false,
+  "jev_outcome": "HP:0033670",
+  "letter_to_curie": {
+   "A": "HP:0033670",
+   "B": "MONDO:0015265",
+   "C": "MONDO:0015264",
+   "D": "MONDO:0005972"
+  }
+ },
+ "25": {
+  "group": "acted",
+  "role": "object",
+  "key": "deficiencydisease",
+  "curie": "MONDO:0009376",
+  "count": 11,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0006873",
+  "letter_to_curie": {
+   "A": "MONDO:0009376",
+   "B": "MONDO:0006873",
+   "C": "MONDO:0003019",
+   "D": "MONDO:0001341"
+  }
+ },
+ "26": {
+  "group": "acted",
+  "role": "object",
+  "key": "metabolicbonedisease",
+  "curie": "MONDO:0016370",
+  "count": 38,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0800486",
+  "letter_to_curie": {
+   "A": "MONDO:0005382",
+   "B": "MONDO:0005066",
+   "C": "MONDO:0016370",
+   "D": "MONDO:0800486"
+  }
+ },
+ "27": {
+  "group": "acted",
+  "role": "object",
+  "key": "urinarytractinfections",
+  "curie": "HP:0000010",
+  "count": 113,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0100338",
+  "letter_to_curie": {
+   "A": "MONDO:0100338",
+   "B": "HP:0000010",
+   "C": "MONDO:0011373"
+  }
+ },
+ "28": {
+  "group": "acted",
+  "role": "object",
+  "key": "congenitalneutropenia",
+  "curie": "MONDO:0015134",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0018542",
+  "letter_to_curie": {
+   "A": "MONDO:0010294",
+   "B": "MONDO:0015134",
+   "C": "MONDO:0018542"
+  }
+ },
+ "29": {
+  "group": "dropped",
+  "role": "object",
+  "key": "afnd",
+  "curie": "MONDO:0011359",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "MONDO:0011959",
+   "B": "MONDO:0011359"
+  }
+ },
+ "30": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "ar",
+  "curie": "DRUGBANK:DB05812",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:232302",
+   "B": "CHEBI:232162",
+   "C": "DRUGBANK:DB05812",
+   "D": "CHEBI:93630"
+  }
+ },
+ "31": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136123",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:64482",
+   "B": "CHEBI:16110",
+   "C": "CHEBI:136123",
+   "D": "PUBCHEM.COMPOUND:25223701"
+  }
+ },
+ "32": {
+  "group": "acted",
+  "role": "object",
+  "key": "diabetesmellitustype2",
+  "curie": "MONDO:0007452",
+  "count": 40,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0005148",
+  "letter_to_curie": {
+   "A": "MONDO:0005408",
+   "B": "MONDO:0007452",
+   "C": "MONDO:0005148",
+   "D": "MONDO:0005147"
+  }
+ },
+ "33": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136064",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:64482",
+   "B": "CHEBI:136064",
+   "C": "PUBCHEM.COMPOUND:25223701",
+   "D": "CHEBI:16110"
+  }
+ },
+ "34": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "lglucose",
+  "curie": "DRUGBANK:DB12970",
+  "count": 7,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:24749",
+   "B": "CHEBI:37630",
+   "C": "DRUGBANK:DB12970",
+   "D": "CHEBI:37631"
+  }
+ },
+ "35": {
+  "group": "dropped",
+  "role": "object",
+  "key": "secondaryhypogammaglobulinemia",
+  "curie": "MONDO:0015517",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "MONDO:0015698",
+   "B": "MONDO:0003827",
+   "C": "MONDO:0015517"
+  }
+ },
+ "36": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "dserine",
+  "curie": "DRUGBANK:DB00260",
+  "count": 2,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:37713",
+   "B": "CHEBI:17822",
+   "C": "DRUGBANK:DB00260",
+   "D": "CHEBI:60390"
+  }
+ },
+ "37": {
+  "group": "acted",
+  "role": "object",
+  "key": "scad",
+  "curie": "MONDO:0008722",
+  "count": 29,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0007385",
+  "letter_to_curie": {
+   "A": "MONDO:0007385",
+   "B": "MONDO:0008722"
+  }
+ },
+ "38": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylethanolamine",
+  "curie": "CHEBI:136202",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:16038",
+   "B": "CHEBI:47767",
+   "C": "CHEBI:136202",
+   "D": "PUBCHEM.COMPOUND:114944"
+  }
+ },
+ "39": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "alphaamylase",
+  "curie": "DRUGBANK:DB11065",
+  "count": 11,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:17396988",
+   "B": "DRUGBANK:DB11065",
+   "C": "PUBCHEM.COMPOUND:81439629"
+  }
+ },
+ "40": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "rayon",
+  "curie": "DRUGBANK:DB14158",
+  "count": 4,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:135534339",
+   "B": "CHEBI:17234",
+   "C": "DRUGBANK:DB14158"
+  }
+ },
+ "41": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136122",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:136122",
+   "B": "PUBCHEM.COMPOUND:25223701",
+   "C": "CHEBI:64482",
+   "D": "CHEBI:16110"
+  }
+ },
+ "42": {
+  "group": "acted",
+  "role": "object",
+  "key": "nsclc",
+  "curie": "MONDO:0011282",
+  "count": 11,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0005233",
+  "letter_to_curie": {
+   "A": "MONDO:0005233",
+   "B": "MONDO:0011282",
+   "C": "MONDO:0056806"
+  }
+ },
+ "43": {
+  "group": "acted",
+  "role": "object",
+  "key": "isletcellhyperplasia",
+  "curie": "MONDO:0005803",
+  "count": 4,
+  "symbol_hint": false,
+  "jev_outcome": "HP:0004510",
+  "letter_to_curie": {
+   "A": "MONDO:0007834",
+   "B": "MONDO:0005803",
+   "C": "HP:0004510"
+  }
+ },
+ "44": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "c",
+  "curie": "DRUGBANK:DB09278",
+  "count": 2,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:16040",
+   "B": "DRUGBANK:DB11312",
+   "C": "DRUGBANK:DB09278",
+   "D": "CHEBI:64656"
+  }
+ },
+ "45": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "ca",
+  "curie": "DRUGBANK:DB11846",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB11846",
+   "B": "PUBCHEM.COMPOUND:51035398",
+   "C": "PUBCHEM.COMPOUND:118224238",
+   "D": "CHEBI:30912"
+  }
+ },
+ "46": {
+  "group": "dropped",
+  "role": "object",
+  "key": "gh",
+  "curie": "MONDO:0005081",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "MONDO:0000050",
+   "B": "HP:0031036",
+   "C": "MONDO:0009877",
+   "D": "MONDO:0005081"
+  }
+ },
+ "47": {
+  "group": "acted",
+  "role": "object",
+  "key": "fundicglandpolyposis",
+  "curie": "MONDO:0017790",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0008284",
+  "letter_to_curie": {
+   "A": "HP:0005227",
+   "B": "MONDO:0017790",
+   "C": "MONDO:0008284"
+  }
+ },
+ "48": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136086",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:64482",
+   "B": "CHEBI:136086",
+   "C": "CHEBI:16110",
+   "D": "PUBCHEM.COMPOUND:25223701"
+  }
+ },
+ "49": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136085",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:25223701",
+   "B": "CHEBI:16110",
+   "C": "CHEBI:64482",
+   "D": "CHEBI:136085"
+  }
+ },
+ "50": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "nmda",
+  "curie": "DRUGBANK:DB01221",
+  "count": 115,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB01221",
+   "B": "CHEBI:31882",
+   "C": "PUBCHEM.COMPOUND:155458066",
+   "D": "CHEBI:181378"
+  }
+ },
+ "51": {
+  "group": "acted",
+  "role": "object",
+  "key": "cervicaltumour",
+  "curie": "HP:0030159",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0002974",
+  "letter_to_curie": {
+   "A": "HP:0030159",
+   "B": "MONDO:0000481",
+   "C": "MONDO:0002974"
+  }
+ },
+ "52": {
+  "group": "acted",
+  "role": "object",
+  "key": "malabsorptionofglucose",
+  "curie": "MONDO:0001076",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0011731",
+  "letter_to_curie": {
+   "A": "MONDO:0011731",
+   "B": "MONDO:0020598",
+   "C": "MONDO:0001076"
+  }
+ },
+ "53": {
+  "group": "dropped",
+  "role": "object",
+  "key": "ins",
+  "curie": "MONDO:0024677",
+  "count": 2,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "MONDO:0007454",
+   "B": "MONDO:0013240",
+   "C": "MONDO:0024677",
+   "D": "MONDO:0009874"
+  }
+ },
+ "54": {
+  "group": "acted",
+  "role": "object",
+  "key": "metabolicbonedisorder",
+  "curie": "MONDO:0016370",
+  "count": 7,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0800486",
+  "letter_to_curie": {
+   "A": "MONDO:0003225",
+   "B": "MONDO:0800486",
+   "C": "MONDO:0016370",
+   "D": "MONDO:0005381"
+  }
+ },
+ "55": {
+  "group": "acted",
+  "role": "object",
+  "key": "glutathionuria",
+  "curie": "MONDO:0009285",
+  "count": 2,
+  "symbol_hint": false,
+  "jev_outcome": "HP:0034586",
+  "letter_to_curie": {
+   "A": "MONDO:0009285",
+   "B": "HP:0034586"
+  }
+ },
+ "56": {
+  "group": "acted",
+  "role": "subject",
+  "key": "ginsenosiderb2",
+  "curie": "DRUGBANK:DB06748",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "PUBCHEM.COMPOUND:432450",
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:432450",
+   "B": "PUBCHEM.COMPOUND:14162969",
+   "C": "DRUGBANK:DB06748",
+   "D": "PUBCHEM.COMPOUND:44202120"
+  }
+ },
+ "57": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136088",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:136088",
+   "B": "CHEBI:16110",
+   "C": "CHEBI:64482",
+   "D": "PUBCHEM.COMPOUND:25223701"
+  }
+ },
+ "58": {
+  "group": "acted",
+  "role": "object",
+  "key": "bladdercancer",
+  "curie": "MONDO:0022578",
+  "count": 291,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0001187",
+  "letter_to_curie": {
+   "A": "MONDO:0004182",
+   "B": "MONDO:0001187",
+   "C": "MONDO:0022578"
+  }
+ },
+ "59": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136101",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:25223701",
+   "B": "CHEBI:136101",
+   "C": "CHEBI:64482",
+   "D": "CHEBI:16110"
+  }
+ },
+ "60": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:134593",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:64482",
+   "B": "CHEBI:134593",
+   "C": "CHEBI:16110",
+   "D": "PUBCHEM.COMPOUND:25223701"
+  }
+ },
+ "61": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136068",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:64482",
+   "B": "CHEBI:16110",
+   "C": "CHEBI:136068",
+   "D": "PUBCHEM.COMPOUND:25223701"
+  }
+ },
+ "62": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "saccharatedferricoxide",
+  "curie": "DRUGBANK:DB09146",
+  "count": 12,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:31794",
+   "B": "CHEBI:50819",
+   "C": "CHEBI:36560",
+   "D": "DRUGBANK:DB09146"
+  }
+ },
+ "63": {
+  "group": "acted",
+  "role": "object",
+  "key": "mas",
+  "curie": "MONDO:0100004",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0015545",
+  "letter_to_curie": {
+   "A": "MONDO:0100004",
+   "B": "MONDO:0006851",
+   "C": "MONDO:0015545",
+   "D": "MONDO:0018919"
+  }
+ },
+ "64": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "pancreaticlipase",
+  "curie": "DRUGBANK:DB13147",
+  "count": 8,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:169494226",
+   "B": "DRUGBANK:DB13147",
+   "C": "PUBCHEM.COMPOUND:10695614"
+  }
+ },
+ "65": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "insp3",
+  "curie": "DRUGBANK:DB03401",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:122248",
+   "B": "PUBCHEM.COMPOUND:3083494",
+   "C": "DRUGBANK:DB03401"
+  }
+ },
+ "66": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "sle",
+  "curie": "DRUGBANK:DB01015",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB14565",
+   "B": "PUBCHEM.COMPOUND:44150682",
+   "C": "DRUGBANK:DB01015",
+   "D": "CHEBI:190306"
+  }
+ },
+ "67": {
+  "group": "dropped",
+  "role": "object",
+  "key": "sepn1relatedmyopathy",
+  "curie": "MONDO:0100100",
+  "count": 2,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "MONDO:0005336",
+   "B": "MONDO:0013731",
+   "C": "MONDO:0100100"
+  }
+ },
+ "68": {
+  "group": "dropped",
+  "role": "object",
+  "key": "ectopicatrialtachycardia",
+  "curie": "HP:0011701",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "HP:0011701",
+   "B": "HP:0011700",
+   "C": "MONDO:0005479"
+  }
+ },
+ "69": {
+  "group": "acted",
+  "role": "object",
+  "key": "earlygastriccancer",
+  "curie": "MONDO:0001060",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0001056",
+  "letter_to_curie": {
+   "A": "MONDO:0001060",
+   "B": "MONDO:0004631",
+   "C": "MONDO:0001056"
+  }
+ },
+ "70": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylethanolamine",
+  "curie": "CHEBI:136153",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:16038",
+   "B": "PUBCHEM.COMPOUND:114944",
+   "C": "CHEBI:136153",
+   "D": "CHEBI:47767"
+  }
+ },
+ "71": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "1hpyrazole",
+  "curie": "DRUGBANK:DB02757",
+  "count": 1,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:148437",
+   "B": "DRUGBANK:DB02757",
+   "C": "PUBCHEM.COMPOUND:17155"
+  }
+ },
+ "72": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136058",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:25223701",
+   "B": "CHEBI:64482",
+   "C": "CHEBI:136058",
+   "D": "CHEBI:16110"
+  }
+ },
+ "73": {
+  "group": "acted",
+  "role": "subject",
+  "key": "glucoside",
+  "curie": "DRUGBANK:DB02379",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:24278",
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB02379",
+   "B": "CHEBI:24278",
+   "C": "CHEBI:81685",
+   "D": "CHEBI:27994"
+  }
+ },
+ "74": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136070",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:64482",
+   "B": "CHEBI:16110",
+   "C": "PUBCHEM.COMPOUND:25223701",
+   "D": "CHEBI:136070"
+  }
+ },
+ "75": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "cd",
+  "curie": "DRUGBANK:DB14547",
+  "count": 4,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "DRUGBANK:DB14547",
+   "B": "CHEBI:82335",
+   "C": "PUBCHEM.COMPOUND:164456",
+   "D": "CHEBI:82279"
+  }
+ },
+ "76": {
+  "group": "acted",
+  "role": "subject",
+  "key": "co",
+  "curie": "DRUGBANK:DB09278",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": "CHEBI:17245",
+  "letter_to_curie": {
+   "A": "CHEBI:3770",
+   "B": "CHEBI:17245",
+   "C": "DRUGBANK:DB09278",
+   "D": "CHEBI:16379"
+  }
+ },
+ "77": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "phosphatidylcholine",
+  "curie": "CHEBI:136103",
+  "count": 6,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "CHEBI:64482",
+   "B": "PUBCHEM.COMPOUND:25223701",
+   "C": "CHEBI:16110",
+   "D": "CHEBI:136103"
+  }
+ },
+ "78": {
+  "group": "dropped",
+  "role": "subject",
+  "key": "bnp",
+  "curie": "DRUGBANK:DB04899",
+  "count": 3,
+  "symbol_hint": false,
+  "jev_outcome": null,
+  "letter_to_curie": {
+   "A": "PUBCHEM.COMPOUND:53395955",
+   "B": "CHEBI:80234",
+   "C": "DRUGBANK:DB04899",
+   "D": "PUBCHEM.COMPOUND:102601995"
+  }
+ },
+ "79": {
+  "group": "acted",
+  "role": "object",
+  "key": "chronicallograftnephropathy",
+  "curie": "MONDO:0012833",
+  "count": 13,
+  "symbol_hint": false,
+  "jev_outcome": "MONDO:0010793",
+  "letter_to_curie": {
+   "A": "MONDO:0007416",
+   "B": "MONDO:0012833",
+   "C": "MONDO:0010793"
+  }
+ }
+}

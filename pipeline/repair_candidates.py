@@ -1,11 +1,14 @@
 """
 Candidate replacement concepts for (mention, concept) pairs judged wrong (pair P(wrong) >= 0.9).
 
-Sources, in order: a fixed table of processed peptides (PEPTIDES, the only Protein Ontology ids offered); exact HGNC
-matches of the mention (approved symbol, then alias or previous symbol), giving the gene's reviewed UniProt protein;
-then NameRes lookups restricted to human gene products (UniProtKB, NCBIGene) and, for chemical-side mentions,
-ChEBI / DrugBank / PubChem.
-A chemical-side mention gets gene-product candidates too, since many errors are proteins mapped to protein drugs.
+What a mention may be repaired to depends on the family and role (families.py "candidates"):
+- gene: a fixed table of processed peptides (PEPTIDES, the only Protein Ontology ids offered); exact HGNC matches of
+  the mention (approved symbol, then alias or previous symbol), giving the gene's reviewed UniProt protein; then a
+  NameRes lookup restricted to human gene products (UniProtKB, NCBIGene)
+- chemical: a NameRes lookup restricted to ChEBI / DrugBank / PubChem
+- condition: a NameRes lookup restricted to diseases and phenotypes (MONDO, HP)
+In chem_gene a chemical-side mention gets gene-product candidates too, since many errors are proteins mapped to
+protein drugs. In chem_disease it doesn't: an endogenous protein mapped to a drug is dropped, not repaired.
 
 NameRes failures after retries are recorded in the output (nameres_error), not hidden.
 
@@ -25,6 +28,11 @@ from rules import load_hgnc_symbols, norm
 
 NAMERES = "https://name-resolution-sri.renci.org/lookup"
 MAX_CANDIDATES = 6
+NAMERES_QUERIES = {
+    "gene": {"biolink_type": "GeneOrGeneProduct", "only_taxa": "NCBITaxon:9606", "only_prefixes": "UniProtKB|NCBIGene"},
+    "chemical": {"biolink_type": "ChemicalEntity", "only_prefixes": "CHEBI|DRUGBANK|PUBCHEM.COMPOUND"},
+    "condition": {"biolink_type": "DiseaseOrPhenotypicFeature", "only_prefixes": "MONDO|HP"},
+}
 
 # Processed peptides get Protein Ontology ids (Chris, 2026-11-13), and only these: PR's gene-level protein classes
 # (PR:000001391 interleukin-4) are not merged with their genes in NodeNorm, so every other protein uses human UniProt.
@@ -76,8 +84,8 @@ def nameres(query: str, **params) -> list[dict]:
     return []
 
 
-def candidates_for(pair: dict, symbol: dict, alias: dict, info: dict, chemical_regulator: bool) -> dict:
-    """Up to MAX_CANDIDATES replacement concepts for one pair, excluding its current concept."""
+def candidates_for(pair: dict, symbol: dict, alias: dict, info: dict, kinds: tuple[str, ...]) -> dict:
+    """Up to MAX_CANDIDATES replacement concepts of the given kinds for one pair, excluding its current concept."""
     found, seen, error = [], {pair["curie"]}, None
 
     def add(curie, label, kind, source):
@@ -86,18 +94,17 @@ def candidates_for(pair: dict, symbol: dict, alias: dict, info: dict, chemical_r
             found.append({"curie": curie, "label": label, "type": kind, "source": source})
 
     key = pair["key"]
-    if key in PEPTIDES:
-        curie, label = PEPTIDES[key]
-        add(curie, label, "processed peptide", "peptide_list")
-    if key in symbol:
-        g = info[symbol[key]]
-        add(g["curie"], g["label"], g["type"], "hgnc_symbol")
-    for hgnc_id in alias.get(key, [])[:3]:
-        g = info[hgnc_id]
-        add(g["curie"], g["label"], g["type"], "hgnc_alias")
-    queries = [{"biolink_type": "GeneOrGeneProduct", "only_taxa": "NCBITaxon:9606", "only_prefixes": "UniProtKB|NCBIGene"}]
-    if pair["role"] == "subject" and chemical_regulator:
-        queries.append({"biolink_type": "ChemicalEntity", "only_prefixes": "CHEBI|DRUGBANK|PUBCHEM.COMPOUND"})
+    if "gene" in kinds:
+        if key in PEPTIDES:
+            curie, label = PEPTIDES[key]
+            add(curie, label, "processed peptide", "peptide_list")
+        if key in symbol:
+            g = info[symbol[key]]
+            add(g["curie"], g["label"], g["type"], "hgnc_symbol")
+        for hgnc_id in alias.get(key, [])[:3]:
+            g = info[hgnc_id]
+            add(g["curie"], g["label"], g["type"], "hgnc_alias")
+    queries = [NAMERES_QUERIES[kind] for kind in kinds]
     try:
         for params in queries:
             for hit in nameres(pair["mention"], **params)[:3]:
@@ -127,8 +134,8 @@ def main(family: str, pairs_path: str, scores_path: str, hgnc_path: str, out_pat
     pairs = [p for p in pairs if p["symbol_hint"] or (p["role"], p["key"], p["curie"]) in wrong]
     symbol, alias, info = load_hgnc(hgnc_path)
     with ThreadPoolExecutor(max_workers=8) as pool, open(out_path, "w") as out:
-        chemical_regulator = FAMILIES[family]["chemical_regulator"]
-        results = pool.map(lambda p: {**candidates_for(p, symbol, alias, info, chemical_regulator),
+        kinds = FAMILIES[family]["candidates"]
+        results = pool.map(lambda p: {**candidates_for(p, symbol, alias, info, kinds[p["role"]]),
                                       "symbol_hint": p["symbol_hint"]}, pairs)
         out.writelines(json.dumps(result) + "\n" for result in results)
     print(f"candidates for {len(pairs)} pairs written to {out_path}")

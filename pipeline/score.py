@@ -3,7 +3,7 @@
 # dependencies = ["typesafe-sdk==0.7.2"]
 # ///
 """
-Ask Jev the two per-item questions for TMKP chemical -> protein sentences, resumably:
+Ask Jev the two per-item questions for one TMKP edge family (families.py), resumably:
 
 - pairs: the mapping question, once per distinct (mention, concept) pair (input: build_pairs.py output)
 - relation: the relation question, once per sentence (input: extract_sentences.py output)
@@ -14,7 +14,8 @@ the next run. A chunk in which most calls fail stops the run.
     TYPESAFE_API_KEY="$(security find-generic-password -s typesafe -w)" \\
         uv run score.py pairs chem_gene_pairs.jsonl chem_gene_pair_scores.jsonl pair_errors.jsonl --family chem_gene
     TYPESAFE_API_KEY="$(security find-generic-password -s typesafe -w)" \\
-        uv run score.py relation chem_gene_sentences.jsonl chem_gene_relation_scores.jsonl relation_errors.jsonl
+        uv run score.py relation chem_gene_sentences.jsonl chem_gene_relation_scores.jsonl relation_errors.jsonl \\
+        --family chem_gene
 """
 
 import argparse
@@ -26,11 +27,28 @@ from pathlib import Path
 
 import jev_client
 from families import FAMILIES
-from prompts import PAIR_CRITERIA, PAIR_INSTRUCTIONS, RELATION_CRITERIA, RELATION_INSTRUCTIONS, marked
+from prompts import (
+    CONTRIBUTES_CRITERIA,
+    CONTRIBUTES_INSTRUCTIONS,
+    CONTRIBUTES_PAIR_CRITERIA,
+    PAIR_CRITERIA,
+    PAIR_INSTRUCTIONS,
+    RELATION_CRITERIA,
+    RELATION_INSTRUCTIONS,
+    marked,
+)
 from typesafe_sdk import TypeSafeClient, TypeSafeError
 
 CHUNK = 4000
 KEYS = {"pairs": ("role", "key", "curie"), "relation": ("edge_id", "sentence_id")}
+# Per relation question (families.py "question"): the mapping criteria, the relation question, and the state keys
+# naming the subject and object
+QUESTIONS = {
+    "regulation": {"pair_criteria": PAIR_CRITERIA, "instructions": RELATION_INSTRUCTIONS,
+                   "criteria": RELATION_CRITERIA, "roles": ("regulator", "target")},
+    "contributes_to": {"pair_criteria": CONTRIBUTES_PAIR_CRITERIA, "instructions": CONTRIBUTES_INSTRUCTIONS,
+                       "criteria": CONTRIBUTES_CRITERIA, "roles": ("drug", "condition")},
+}
 
 
 def ask_pair(client: TypeSafeClient, pair: dict, family: str) -> dict:
@@ -38,7 +56,8 @@ def ask_pair(client: TypeSafeClient, pair: dict, family: str) -> dict:
     state = {"mention": pair["mention"], "concept": pair["name"] or pair["curie"],
              "examples": [marked(e) for e in pair["examples"]]}
     kind = FAMILIES[family]["kind"][pair["role"]]
-    answer = jev_client.choose(client, state, PAIR_INSTRUCTIONS.format(kind=kind), PAIR_CRITERIA)
+    criteria = QUESTIONS[FAMILIES[family]["question"]]["pair_criteria"]
+    answer = jev_client.choose(client, state, PAIR_INSTRUCTIONS.format(kind=kind), criteria)
     return {"role": pair["role"], "key": pair["key"], "curie": pair["curie"], "count": pair["count"],
             "choice": answer["choice"], "probabilities": answer["probabilities"], "model": answer["model"],
             "input_tokens": answer["input_tokens"]}
@@ -46,9 +65,11 @@ def ask_pair(client: TypeSafeClient, pair: dict, family: str) -> dict:
 
 def ask_relation(client: TypeSafeClient, s: dict, family: str) -> dict:
     """The relation question for one sentence."""
-    state = {"text": s["text"], "regulator": f'{s["subject_mention"]} [{s["subject_name"]}]',
-             "target": f'{s["object_mention"]} [{s["object_name"]}]'}
-    answer = jev_client.choose(client, state, RELATION_INSTRUCTIONS, RELATION_CRITERIA)
+    q = QUESTIONS[FAMILIES[family]["question"]]
+    subject_key, object_key = q["roles"]
+    state = {"text": s["text"], subject_key: f'{s["subject_mention"]} [{s["subject_name"]}]',
+             object_key: f'{s["object_mention"]} [{s["object_name"]}]'}
+    answer = jev_client.choose(client, state, q["instructions"], q["criteria"])
     return {"edge_id": s["edge_id"], "sentence_id": s["sentence_id"],
             "relation": {"choice": answer["choice"], "probabilities": answer["probabilities"]},
             "model": answer["model"], "input_tokens": answer["input_tokens"]}
@@ -63,8 +84,7 @@ def main() -> None:
     parser.add_argument("errors", type=Path)
     parser.add_argument("--concurrency", type=int, default=32)
     parser.add_argument("--limit", type=int, help="score at most this many items (for a trial run)")
-    parser.add_argument("--family", choices=sorted(FAMILIES), default="chem_gene",
-                        help="which regulator kind the pair question names (families.py)")
+    parser.add_argument("--family", choices=sorted(FAMILIES), required=True, help="the edge family (families.py)")
     args = parser.parse_args()
     fields = KEYS[args.mode]
     client = jev_client.connect()

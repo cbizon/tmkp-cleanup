@@ -1,0 +1,1355 @@
+{
+ "0": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "1": {
+  "relation": "IN_VITRO",
+  "mapping": "WRONG",
+  "note": "colon carcinoma names the Caco-2 cell line; menadione is an oxidative-stress tool in cells"
+ },
+ "2": {
+  "relation": "IN_VITRO",
+  "mapping": "OK",
+  "note": "risk-factor claim rests on cytotoxicity data in cells"
+ },
+ "3": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "4": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "single trial participant developed HF; no attribution"
+ },
+ "5": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "generic phosphatidylcholine mapped to one molecular species; indirect via TMAO"
+ },
+ "6": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "diabetes induced by STZ, fluoride affects sperm quality"
+ },
+ "7": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "angioedema mentioned as manifestation patients lack"
+ },
+ "8": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "9": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "resolution on stopping tramadol implies causation"
+ },
+ "10": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "high glucose levels (hyperglycemia) leading to visual field defects"
+ },
+ "11": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "endogenous glycine excitotoxicity in rabbit model"
+ },
+ "12": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "13": {
+  "relation": "IN_VITRO",
+  "mapping": "WRONG",
+  "note": "P407 is part of the P407-ATV nanoformulation; MDM culture"
+ },
+ "14": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "15": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "one patient in dexamethasone arm; no attribution"
+ },
+ "16": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "17": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "18": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "19": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "20": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "cystic fibrosis is background"
+ },
+ "21": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "doxycycline is the transgene inducer"
+ },
+ "22": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "case report: HU-treated patient developed PML"
+ },
+ "23": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "24": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "azotemia after ZOL in dogs; causality hedged/unestablished"
+ },
+ "25": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "marginal association, AOR 2.65"
+ },
+ "26": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "case report of ticagrelor-associated presentation incl. anemia"
+ },
+ "27": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "28": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "cobalamin metabolism defects (deficiency) cause retinopathy"
+ },
+ "29": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "30": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "31": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "study design"
+ },
+ "32": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "hedged risk factor"
+ },
+ "33": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "study design; PUFA (class) mapped to omega-3 fatty acids"
+ },
+ "34": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "cGMP levels are a marker"
+ },
+ "35": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "PVA embolization particles intentionally cause occlusion"
+ },
+ "36": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "excess leucine worsens MMA"
+ },
+ "37": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "38": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "endogenous beta-hCG protein, not given as drug"
+ },
+ "39": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "40": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "anorexia mapped to Anorexia (symptom)"
+ },
+ "41": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "42": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "AE reported after amisulpride"
+ },
+ "43": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "44": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "endogenous LTB4 'involved in' inflammatory diseases"
+ },
+ "45": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "46": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "47": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "drug resistance"
+ },
+ "48": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "bone weakness mapped to asthenia"
+ },
+ "49": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "pneumonia is course of the treated infection"
+ },
+ "50": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "comparative: lamotrigine had lowest T2D risk among AEDs"
+ },
+ "51": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "tamoxifen used as inducer in a conditional mouse model"
+ },
+ "52": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "IPTG is a reagent; vaccinia is the virus, not the disease"
+ },
+ "53": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "54": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "endogenous LTB4 as marker"
+ },
+ "55": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "tetracaine used as anesthetic"
+ },
+ "56": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "57": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "58": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "59": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "case report: scotoma developed on tacrolimus"
+ },
+ "60": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "dyspnea is the patient's disease state"
+ },
+ "61": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "effect of dexamethasone cessation"
+ },
+ "62": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "cortisol excess / glucocorticoid administration"
+ },
+ "63": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "paracetamol intoxication, not CF"
+ },
+ "64": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "viremia cleared after azathioprine stopped"
+ },
+ "65": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "endogenous ACTH; mention is part of tumor name"
+ },
+ "66": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "hair cortisol as marker of hair loss"
+ },
+ "67": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "68": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "AE in sotatercept-treated patients"
+ },
+ "69": {
+  "relation": "TREATS",
+  "mapping": "OK",
+  "note": "G-CSF given restored local neutrophil reduction"
+ },
+ "70": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "discontinued because of CMV colitis (immunosuppression AE)"
+ },
+ "71": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "72": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "estradiol-treated male mice developed severe AP"
+ },
+ "73": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "74": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "endogenous FSH mapped to follitropin"
+ },
+ "75": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "76": {
+  "relation": "IN_VITRO",
+  "mapping": "OK",
+  "note": "garbled; says animal in vitro study"
+ },
+ "77": {
+  "relation": "TREATS",
+  "mapping": "OK",
+  "note": "pitolisant tested in obesity model"
+ },
+ "78": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "79": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "80": {
+  "relation": "IN_VITRO",
+  "mapping": "OK",
+  "note": "cell culture; corticosterone as challenge"
+ },
+ "81": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "oliguria as context impairing clearance"
+ },
+ "82": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "83": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "84": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "aluminum-based binders"
+ },
+ "85": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "86": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "KS judged paraneoplastic, not drug-caused"
+ },
+ "87": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "switched because of liver dysfunction (implied AE)"
+ },
+ "88": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "89": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "90": {
+  "relation": "TREATS",
+  "mapping": "OK",
+  "note": "indomethacin tested against oleic-acid lung edema"
+ },
+ "91": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "medication cause of humoral immunodeficiency"
+ },
+ "92": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "pancreatic cancer mapped to more specific exocrine pancreatic carcinoma"
+ },
+ "93": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "endogenous corticosterone"
+ },
+ "94": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "TIA occurred in both groups"
+ },
+ "95": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "quinine as aversive stimulus, not PTSD model"
+ },
+ "96": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "sulfatide lipid class mapped to one species; vague involvement"
+ },
+ "97": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "phenothiazine class; listed as affecting antibody titers"
+ },
+ "98": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "fever explicitly absent"
+ },
+ "99": {
+  "relation": "IN_VITRO",
+  "mapping": "WRONG",
+  "note": "neuroblastoma cells, not disease"
+ },
+ "100": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "comorbid conditions; azathioprine for Crohn"
+ },
+ "101": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "102": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "103": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "104": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "105": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "106": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "fructose feeding in animals"
+ },
+ "107": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "108": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "DCIS is background"
+ },
+ "109": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "110": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "endogenous cortisol levels associated with malaria risk; marker-like"
+ },
+ "111": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "VMA as marker"
+ },
+ "112": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "113": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "AE incidence by regimen"
+ },
+ "114": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "may precipitate myotonia (also contraindicated)"
+ },
+ "115": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "candidemia in anakinra-treated patients; implied AE"
+ },
+ "116": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "hedged reports of hair loss"
+ },
+ "117": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "118": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "low TLS incidence still an AE"
+ },
+ "119": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "study population"
+ },
+ "120": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "case presentation; not attributed to ixazomib"
+ },
+ "121": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "122": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "123": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "not studied"
+ },
+ "124": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "SAE in levosimendan patient; attribution weak"
+ },
+ "125": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "126": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "elevated endogenous homocysteine as risk factor"
+ },
+ "127": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "128": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "129": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "130": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "valsartan is background medication"
+ },
+ "131": {
+  "relation": "NOEFF",
+  "mapping": "OK"
+ },
+ "132": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "133": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "maternal selenium levels association, direction unstated"
+ },
+ "134": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "135": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "136": {
+  "relation": "OTHER",
+  "mapping": "OK"
+ },
+ "137": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "138": {
+  "relation": "IN_VITRO",
+  "mapping": "WRONG",
+  "note": "hepatoma cells"
+ },
+ "139": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "abatacept-induced colitis referenced as entity; this case favored CD"
+ },
+ "140": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "HBsAg seropositivity, not vaccine"
+ },
+ "141": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "endogenous ACTH"
+ },
+ "142": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "risk did not differ between AChEIs"
+ },
+ "143": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "144": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "145": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "146": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "147": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "148": {
+  "relation": "TREATS",
+  "mapping": "OK"
+ },
+ "149": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "150": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "151": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "study design; vitamin D -> cholecalciferol accepted"
+ },
+ "152": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "absence of reports; drug unmasked underlying disorder"
+ },
+ "153": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "154": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "155": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "neuropathy mapped to more specific peripheral neuropathy"
+ },
+ "156": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "157": {
+  "relation": "NOEFF",
+  "mapping": "OK"
+ },
+ "158": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "159": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "Cr(VI)-induced mitochondrial dysfunction; system unclear"
+ },
+ "160": {
+  "relation": "NOEFF",
+  "mapping": "OK",
+  "note": "N-MXD formulation of minoxidil"
+ },
+ "161": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "162": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "no prior reports"
+ },
+ "163": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "164": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "hydromorphone given for sedation"
+ },
+ "165": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "166": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "167": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "168": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "169": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "heparin furthers Zika infection; likely cell-based but not stated"
+ },
+ "170": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "isoflurane hypotension suggested cause of hearing loss"
+ },
+ "171": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "butyrate alters gene expression associated with ASD; indirect"
+ },
+ "172": {
+  "relation": "CAUTION",
+  "mapping": "OK"
+ },
+ "173": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "URTI mapped to recurrent URTI"
+ },
+ "174": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "NMDA (receptor) mapped to ketamine"
+ },
+ "175": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "176": {
+  "relation": "OTHER",
+  "mapping": "OK"
+ },
+ "177": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "copper levels association"
+ },
+ "178": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "monitoring for heparin-related femoral neuropathy"
+ },
+ "179": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "testosterone with estradiol in combination"
+ },
+ "180": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "181": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "title; amox-clav is comparator"
+ },
+ "182": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "183": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "184": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "185": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "186": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "187": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "different condition"
+ },
+ "188": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "189": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "190": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "191": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "title: zinc favors TNBC; evidence type unclear"
+ },
+ "192": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "193": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "194": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "comparative incidence of anesthetics"
+ },
+ "195": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "valine deficiency"
+ },
+ "196": {
+  "relation": "OTHER",
+  "mapping": "OK"
+ },
+ "197": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "198": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "edema from ALA-PDT, griseofulvin only interaction"
+ },
+ "199": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "no reports, insufficient evidence"
+ },
+ "200": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "201": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "polyuria improved on tapering difluprednate"
+ },
+ "202": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "203": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "204": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "205": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "possibly triggered by ivabradine"
+ },
+ "206": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "AKI raised flecainide levels (reverse direction)"
+ },
+ "207": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "208": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "arthritis despite benzbromarone"
+ },
+ "209": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "210": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "creatinine as marker"
+ },
+ "211": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "212": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "isoleucine levels associated with PTC risk; marker"
+ },
+ "213": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "214": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "AEs in VivaGel placebo arm"
+ },
+ "215": {
+  "relation": "TREATS",
+  "mapping": "OK"
+ },
+ "216": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "217": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "taurine scarcity"
+ },
+ "218": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "219": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "weak: AE reports among alendronate users"
+ },
+ "220": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "221": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "222": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "GTN = gentamicin in nephrotoxicity model"
+ },
+ "223": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "224": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "225": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "delusional disorder is background"
+ },
+ "226": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "drug users developed rhabdomyolysis-associated renal failure"
+ },
+ "227": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "228": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "cholesterol as diet ingredient"
+ },
+ "229": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "endogenous NO, dichotomous role"
+ },
+ "230": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "adrenal insufficiency persisted on replacement dexamethasone"
+ },
+ "231": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "potentiates acute hearing loss, also protective chronically"
+ },
+ "232": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "233": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "234": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "235": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "endogenous IL-10 urinary marker"
+ },
+ "236": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "237": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "endogenous leptin"
+ },
+ "238": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "239": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "240": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "glucose-induced nephropathy model"
+ },
+ "241": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "flies"
+ },
+ "242": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "Samter's triad listing"
+ },
+ "243": {
+  "relation": "NOEFF",
+  "mapping": "OK"
+ },
+ "244": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "hypocholesterolemia facilitates cyclosporine neurotoxicity"
+ },
+ "245": {
+  "relation": "OTHER",
+  "mapping": "OK"
+ },
+ "246": {
+  "relation": "NOEFF",
+  "mapping": "OK"
+ },
+ "247": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "248": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "comparative: lower dementia hazard vs warfarin"
+ },
+ "249": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "250": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "251": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "252": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "253": {
+  "relation": "TREATS",
+  "mapping": "OK"
+ },
+ "254": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "table title / study design"
+ },
+ "255": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "256": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "257": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "zinc deficiency"
+ },
+ "258": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "figure title reporting fetal abnormalities after dam treatment"
+ },
+ "259": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "DVT preceded ruxolitinib"
+ },
+ "260": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "endogenous homocysteine as risk factor"
+ },
+ "261": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "262": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "263": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "264": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "endogenous LH levels"
+ },
+ "265": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "endogenous triglyceride accumulation (Refsum)"
+ },
+ "266": {
+  "relation": "NOEFF",
+  "mapping": "OK"
+ },
+ "267": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "268": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "269": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "study design"
+ },
+ "270": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "271": {
+  "relation": "IN_VITRO",
+  "mapping": "WRONG",
+  "note": "glioblastoma cell line"
+ },
+ "272": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "273": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "ptosis attributed to trabeculectomy surgery"
+ },
+ "274": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "endogenous leptin level as risk factor"
+ },
+ "275": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "potassium as ingredient of rock salt"
+ },
+ "276": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "277": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "thrombin administered experimentally induces hyperglycemia"
+ },
+ "278": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "BC mapped to childhood bladder carcinoma"
+ },
+ "279": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "280": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "281": {
+  "relation": "OTHER",
+  "mapping": "WRONG",
+  "note": "pituitary gland (anatomy) mapped to hypophysitis"
+ },
+ "282": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "283": {
+  "relation": "NOEFF",
+  "mapping": "OK"
+ },
+ "284": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "285": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "title linking cyclosporine neurotoxicity and hypertensive encephalopathy"
+ },
+ "286": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "287": {
+  "relation": "CAUSES",
+  "mapping": "OK",
+  "note": "agarose beads used to induce HF in animals"
+ },
+ "288": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "289": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "290": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "paroxetine is comparator"
+ },
+ "291": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "292": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "293": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "294": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "295": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "296": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ },
+ "297": {
+  "relation": "CAUSES",
+  "mapping": "WRONG",
+  "note": "endogenous leptin"
+ },
+ "298": {
+  "relation": "OTHER",
+  "mapping": "OK",
+  "note": "iodine insufficiency"
+ },
+ "299": {
+  "relation": "CAUSES",
+  "mapping": "OK"
+ }
+}

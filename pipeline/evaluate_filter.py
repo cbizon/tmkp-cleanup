@@ -4,10 +4,12 @@ mapped" (dropped or moved to a repaired edge) finds the sentences that don't sup
 
     python evaluate_filter.py validation/chem_gene
     python evaluate_filter.py validation/gene_gene
+    python evaluate_filter.py validation/chem_disease
 
-A sentence is unsupported when its labeled mapping is WRONG or its labeled relation isn't the edge's direction
-(INC for increased, DEC for decreased). Labels were made blind to Jev by separate Claude instances from a written
-rubric; a protein family or complex mapped to one member counts as WRONG.
+A sentence is unsupported when its labeled mapping is WRONG or its labeled relation isn't what the edge says: INC for
+increased and DEC for decreased in the regulation families, CAUSES for chem_disease. Labels were made blind to Jev by
+separate Claude instances from a written rubric; a protein family or complex mapped to one member counts as WRONG.
+The family is the validation folder's name.
 """
 
 import json
@@ -16,6 +18,7 @@ from collections import Counter
 from pathlib import Path
 
 from build_repairs import decide, read_jsonl
+from families import FAMILIES
 
 
 def load_answers(v: Path) -> dict:
@@ -34,6 +37,8 @@ def load_answers(v: Path) -> dict:
 def main(validation: str) -> None:
     """Print precision and recall of not keeping a sentence on its edge, and the decisions by label."""
     v = Path(validation)
+    family = v.name
+    contributes = FAMILIES[family]["question"] == "contributes_to"
     answers = load_answers(v)
     relation = {(r["edge_id"], r["sentence_id"]): r["relation"]["probabilities"]
                 for r in read_jsonl(v / "filter_relation.jsonl")}
@@ -42,8 +47,8 @@ def main(validation: str) -> None:
     sample = {r["n"]: r for r in read_jsonl(v / "filter_sample.jsonl")}
     bad, removed, table = set(), set(), Counter()
     for n, s in sample.items():
-        status, _, _, _ = decide(s, relation[(s["edge_id"], s["sentence_id"])], answers)
-        want = "INC" if s["object_direction"] == "increased" else "DEC"
+        status, _, _, _ = decide(s, relation[(s["edge_id"], s["sentence_id"])], answers, family)
+        want = "CAUSES" if contributes else "INC" if s["object_direction"] == "increased" else "DEC"
         if labels[n]["mapping"] == "WRONG" or labels[n]["relation"] != want:
             bad.add(n)
         if status != "keep":
